@@ -1,0 +1,9 @@
+import java.util.*;
+public class Curr_date {
+    public static void main(String[] args)
+    {
+        Date d=new Date();
+        String str=String.format("Current date/time:%tc",d);
+        System.out.print(str);
+    }
+}
