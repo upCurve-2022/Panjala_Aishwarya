@@ -1,0 +1,19 @@
+import java.util.*;
+public class Duplicate_string{
+    public static void main(String args[]) {
+        String str = "";
+        Scanner sc=new Scanner(System.in);
+        str=sc.nextLine();
+        char[] c = str.toCharArray();
+        System.out.println("The string is:" + str);
+        System.out.print("Duplicate Characters in above string are: ");
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = i + 1; j < str.length(); j++) {
+                if (c[i] == c[j]) {
+                    System.out.print(c[j] + " ");
+                    break;
+                }
+            }
+        }
+    }
+}
