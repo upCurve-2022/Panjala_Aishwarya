@@ -1,0 +1,14 @@
+
+import java.util.*;
+public class Str_replace{
+    public static void main(String[] args) {
+        String str ;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a string");
+        str=sc.nextLine();
+        String s = str.replace("a","$");
+        System.out.println("The string after replacement is \n"+s);
+
+    }
+}
+
