@@ -1,0 +1,24 @@
+import java.util.*;
+public class Perfect_square {
+    public static void main(String[] args)
+    {
+        int a,f=0;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number ");
+        a=sc.nextInt();
+        for(int i=1;i<=a;i++)
+        {
+            if(i*i==a)
+                f=1;
+            if(i*i>a)
+                break;
+        }
+        if(f==1)
+            System.out.println("The given number "+a+" is  a perfect square ");
+        else
+            System.out.println("The given number "+a+" is not a perfect square ");
+
+
+
+    }
+}
