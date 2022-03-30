@@ -1,0 +1,25 @@
+import java.util.*;
+public class String_permute {
+    public static void permutation(String str,String a)
+    {
+        if(str.length()==0) {
+            System.out.println(a);
+            return;
+        }
+        for(int i=0;i<str.length();i++)
+        {
+            char c=str.charAt(i);
+            String s=str.substring(0,i)+str.substring(i+1);
+            permutation(s,a+c);
+        }
+
+    }
+    public static void main(String[] args)
+    {
+        String str="GOD",str1="";
+        permutation(str,str1);
+    }
+}
+
+
+
