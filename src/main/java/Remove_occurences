@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class Remove_occurences
+{
+    private static Scanner sc;
+    public static void main(String[] args) {
+        String Str;
+        char del_lch;
+        sc= new Scanner(System.in);
+        System.out.print("Enter String to remove All Characters =  ");
+        Str = sc.nextLine();
+        System.out.print("Enter the Character to Delete =  ");
+        del_lch = sc.next().charAt(0);
+        String out = Str.replace(del_lch, Character.MIN_VALUE);
+        System.out.println("\nThe Final String after removing " + del_lch + " Characters = " + out);
+    }
+}
