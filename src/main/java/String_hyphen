@@ -1,0 +1,25 @@
+import java.util.*;
+class Str_hyphen
+{
+    public static void main(String args[]) {
+        String str ;
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a string\n");
+        str=sc.nextLine();
+        StringBuffer sb = new StringBuffer();
+        for(int i=0;i<str.length();i++)
+        {
+            if(str.charAt(i)=='-'&&str.charAt(i-1)>='0'&&str.charAt(i-1)<='9'&&str.charAt(i+1)>='0'&&str.charAt(i+1)<='9')
+            {
+                continue;
+            }
+            else
+            {
+                sb.append(str.charAt(i));
+            }
+        }
+        System.out.println("The string after removing hyphen is "+sb);
+    }
+
+}
+
