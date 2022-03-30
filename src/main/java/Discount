@@ -1,0 +1,11 @@
+public class Discount {
+    public static void main(String[] args)
+    {
+        double c_price=50;
+        double dis=0.12;
+        double s_price=c_price*dis;
+        System.out.println("The discount and the selling price of the pen is "+dis+" "+(c_price-s_price));
+
+
+    }
+}
