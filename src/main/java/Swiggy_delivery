@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+class MyException extends Exception
+{
+    boolean validateZipCode(String str)
+    {
+        char ch;
+        int count=0;
+        for(int i=0;i<str.length();i++)
+        {
+            ch = str.charAt(i);
+            if(ch>='0' && ch<='9')
+                count++;
+        }
+        if(count==5)
+            return true;
+        return false;
+    }
+    public String toString()
+    {
+        return ("Sorry It is an Invalid zip code");
+    }
+}
+
+public class Zip_code {
+
+    public static void main(String[] args)
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the zip code");
+        String s = sc.nextLine();
+        MyException e = new MyException();
+        try
+        {
+            if(s.length()==5&& s.charAt(0)!='0') 
+            {
+                if (e.validateZipCode(s))
+                    System.out.println("Delivery is available in your area!");
+            }
+            else
+                throw new MyException();
+        }
+        catch (MyException ex)
+        {
+            System.out.println(ex);
+        }
+    }
+}
